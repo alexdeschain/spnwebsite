@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SPN Communications">
+    <meta name="description" content="SPN Communications - Консалтинговое агентство в сфере международных и стратегических коммуникаций. 30 лет опыта, 200+ проектов, 5000+ наград.">
+    <!-- ======== Page title ============ -->
+    <title>SPN Communications — Фабрика Коммуникаций</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/favicon.svg">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- SVG Animation Styles -->
+    <style>
+        @keyframes spn-float1{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(5deg)}}
+        @keyframes spn-float2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(10px) rotate(-3deg)}}
+        @keyframes spn-pulse{0%,100%{opacity:.15}50%{opacity:.35}}
+        @keyframes spn-dash{to{stroke-dashoffset:0}}
+        @keyframes spn-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+        @keyframes spn-scale{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+        @keyframes spn-fade{0%,100%{opacity:.3}50%{opacity:.7}}
+        @keyframes spn-slide{0%{transform:translateX(-10px)}100%{transform:translateX(10px)}}
+        .spn-f1{animation:spn-float1 6s ease-in-out infinite}
+        .spn-f2{animation:spn-float2 8s ease-in-out infinite}
+        .spn-p{animation:spn-pulse 4s ease-in-out infinite}
+        .spn-dl{stroke-dasharray:200;stroke-dashoffset:200;animation:spn-dash 3s ease forwards}
+        .spn-rot{animation:spn-rotate 20s linear infinite}
+        .spn-sc{animation:spn-scale 4s ease-in-out infinite}
+        .spn-fd{animation:spn-fade 3s ease-in-out infinite}
+        .spn-sl{animation:spn-slide 4s ease-in-out infinite alternate}
+        .featured-card .thumb svg:hover,.blog-card .main-thumb svg:hover{transform:scale(1.03);transition:transform .3s ease}
+        .featured-card .thumb svg,.blog-card .main-thumb svg{transition:transform .3s ease}
+        /* Fix typography consistency */
+        .section-title-four .title span,
+        .section-title-four .title {
+            font-family: 'Oswald', sans-serif !important;
+            font-weight: 700 !important;
+        }
+        .section-title-four .title span {
+            font-weight: 400 !important;
+            color: inherit;
+        }
+        /* Ensure client grid text is consistent */
+        .our-client-area-four .title span {
+            font-family: 'Oswald', sans-serif !important;
+        }
+
+
+        /* === SPN HERO === */
+        /* === SPN HERO v2 — unique morphing blob design === */
+        .spn-hero {
+            position: relative;
+            min-height: 100vh;
+            background: #0a0a0a;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .spn-hero__blobs {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .spn-hero__blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0;
+            animation: spn-blob-in 2s ease forwards;
+        }
+        .spn-hero__blob--1 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(237,28,36,0.2) 0%, transparent 70%);
+            top: -10%; right: -5%;
+            animation-delay: 0.2s;
+            animation-duration: 2s;
+        }
+        .spn-hero__blob--2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(237,28,36,0.12) 0%, transparent 70%);
+            bottom: 10%; left: -8%;
+            animation-delay: 0.6s;
+        }
+        .spn-hero__blob--3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+            top: 40%; left: 40%;
+            animation-delay: 1s;
+        }
+        @keyframes spn-blob-in {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .spn-hero__grid-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+        .spn-hero__corner-mark {
+            position: absolute;
+            z-index: 2;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            opacity: 0;
+            animation: spn-fade-up 0.8s ease 1.5s forwards;
+        }
+        .spn-hero__corner-mark--tl { top: 100px; left: 40px; }
+        .spn-hero__corner-mark--br { bottom: 100px; right: 40px; writing-mode: vertical-rl; }
+        .spn-hero__content {
+            position: relative;
+            z-index: 3;
+            padding-top: 160px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .spn-hero__subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #ED1C24;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            opacity: 0;
+            animation: spn-fade-up 0.8s ease 0.3s forwards;
+        }
+        .spn-hero__subtitle::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #ED1C24;
+        }
+        @keyframes spn-fade-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .spn-hero__title {
+            font-family: 'Oswald', sans-serif !important;
+            font-weight: 700;
+            line-height: 1.08;
+            margin: 0;
+        }
+        .spn-hero__line {
+            display: block;
+            font-size: clamp(36px, 5vw, 76px);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        .spn-hero__line {
+            opacity: 0;
+            animation: spn-fade-up 0.8s ease forwards;
+        }
+        .spn-hero__line:nth-child(1) { animation-delay: 0.5s; }
+        .spn-hero__line:nth-child(2) { animation-delay: 0.7s; }
+        .spn-hero__line:nth-child(3) { animation-delay: 0.9s; }
+        .spn-hero__line--accent { color: #ED1C24; }
+        .spn-hero__line--outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.4);
+        }
+        .spn-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px;
+            padding: 14px 32px;
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            opacity: 0;
+            animation: spn-fade-up 0.8s ease 1.2s forwards;
+        }
+        .spn-hero__cta:hover {
+            background: #ED1C24;
+            border-color: #ED1C24;
+            color: #fff;
+        }
+        .spn-hero__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .spn-hero__desc {
+            color: rgba(255,255,255,0.45);
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 300px;
+            margin-left: auto;
+            opacity: 0;
+            animation: spn-fade-up 0.8s ease 1s forwards;
+        }
+        .spn-hero__stats {
+            position: relative;
+            z-index: 3;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .spn-hero__stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .spn-hero__stat {
+            text-align: center;
+            padding: 15px 0;
+            opacity: 0;
+            animation: spn-fade-up 0.6s ease forwards;
+        }
+        .spn-hero__stat:nth-child(1) { animation-delay: 1.4s; }
+        .spn-hero__stat:nth-child(2) { animation-delay: 1.6s; }
+        .spn-hero__stat:nth-child(3) { animation-delay: 1.8s; }
+        .spn-hero__stat:nth-child(4) { animation-delay: 2.0s; }
+        .spn-hero__stat-num {
+            display: block;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: #fff;
+        }
+        .spn-hero__stat-label {
+            display: block;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 11px;
+            color: rgba(255,255,255,0.35);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .spn-hero__scroll {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+        .spn-hero__scroll-line {
+            width: 1px;
+            height: 50px;
+            background: linear-gradient(to bottom, #ED1C24, transparent);
+            animation: spn-scroll-pulse 2s ease-in-out infinite;
+        }
+        @keyframes spn-scroll-pulse {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
+        }
+        @media (max-width: 991px) {
+            .spn-hero__stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .spn-hero__desc { margin-left: 0; margin-top: 30px; max-width: 100%; }
+            .spn-hero__corner-mark { display: none; }
+        }
+        @media (max-width: 575px) {
+            .spn-hero__stats-grid { grid-template-columns: 1fr 1fr; }
+            .spn-hero__content { padding-top: 120px; }
+        }
+
+        /* === SPN Practices listing section === */
+        .spn-practices {
+            padding: 80px 0;
+        }
+        .spn-practices__header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            gap: 30px;
+        }
+        .spn-practices__title {
+            font-family: 'Oswald', sans-serif !important;
+            font-size: clamp(28px, 3.5vw, 48px);
+            font-weight: 700;
+            line-height: 1.15;
+            color: #121212;
+            margin: 0;
+        }
+        .spn-practices__title span { color: #ED1C24; }
+        .spn-practices__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: practice;
+        }
+        .spn-practices__item {
+            counter-increment: practice;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .spn-practices__item:first-child {
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        .spn-practices__link {
+            display: flex;
+            align-items: center;
+            padding: 22px 0;
+            color: #121212;
+            text-decoration: none;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            gap: 20px;
+        }
+        .spn-practices__link::before {
+            content: counter(practice, decimal-leading-zero);
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #ED1C24;
+            min-width: 28px;
+        }
+        .spn-practices__link::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-left: auto;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M4 16L16 4M16 4H6M16 4V14' stroke='%23121212' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+        .spn-practices__link:hover {
+            color: #ED1C24;
+            padding-left: 8px;
+        }
+        .spn-practices__link:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Fix overflow globally */
+        .section-title-four .title {
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+        body {
+            overflow-x: hidden;
+        }
+
+        /* === Mobile Responsive === */
+        @media (max-width: 768px) {
+            .spn-hero__line {
+                font-size: clamp(28px, 8vw, 48px) !important;
+            }
+            .spn-hero__content {
+                padding-top: 100px;
+            }
+            .spn-hero__subtitle {
+                font-size: 11px;
+                margin-bottom: 16px;
+            }
+            .spn-hero__cta {
+                margin-top: 24px;
+                padding: 12px 24px;
+                font-size: 13px;
+            }
+            .spn-hero__stat-num {
+                font-size: 22px;
+            }
+            .spn-hero__stat-label {
+                font-size: 10px;
+            }
+            .spn-practices__link {
+                font-size: 16px;
+                padding: 18px 0;
+            }
+            .spn-practices__title {
+                font-size: clamp(24px, 6vw, 36px) !important;
+            }
+            .spn-card {
+                aspect-ratio: 16/10;
+            }
+            .spn-card--about {
+                aspect-ratio: 16/9;
+            }
+            .spn-card--about .spn-card__title {
+                font-size: 28px;
+            }
+            .spn-card--service {
+                min-height: 200px;
+            }
+            .featured-card .card-title {
+                font-size: 18px !important;
+            }
+            .section-title-four .title {
+                font-size: clamp(24px, 5vw, 40px) !important;
+            }
+            .footer-center .bottom-title {
+                font-size: clamp(24px, 6vw, 40px) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .spn-hero__line {
+                font-size: clamp(24px, 9vw, 40px) !important;
+            }
+            .spn-hero__stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .spn-hero__stat {
+                padding: 10px 0;
+            }
+            .spn-card__num {
+                font-size: 32px;
+            }
+        }
+
+        /* === SPN Placeholder Cards === */
+        /* Make parent containers stretch cards */
+        .featured-card .thumb,
+        .featured-card .hover-item,
+        .featured-card .hover-item a.thumb {
+            display: block;
+            width: 100%;
+        }
+        .featured-card .thumb.no-cursor {
+            display: block;
+            width: 100%;
+        }
+        .spn-card {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 3/2;
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+        .spn-card--1 { background: linear-gradient(135deg, #1a1a2e 0%, #2d1f3d 100%); }
+        .spn-card--2 { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); }
+        .spn-card--3 { background: linear-gradient(135deg, #232526 0%, #414345 100%); }
+        .spn-card--4 { background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #2d1f3d 100%); }
+        .spn-card--5 { background: linear-gradient(135deg, #141e30 0%, #243b55 100%); }
+        .spn-card--6 { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); }
+        .spn-card--red { background: linear-gradient(135deg, #8b0000 0%, #ED1C24 100%); }
+        .spn-card__label {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+        .spn-card__num {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.08);
+            line-height: 1;
+        }
+        .spn-card--about {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #ED1C24 0%, #b71c1c 100%);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .spn-card--about .spn-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .spn-card--about .spn-card__label {
+            color: rgba(255,255,255,0.7);
+        }
+        .spn-card--team {
+            aspect-ratio: 3/4;
+            background: #f0f0f0;
+            align-items: center;
+            justify-content: center;
+        }
+        .spn-card--team-inner {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #e0e0e0;
+        }
+        .spn-card--news {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #f8f8f8 0%, #efefef 100%);
+            border: 1px solid #e8e8e8;
+        }
+        .spn-card--news .spn-card__label {
+            color: #999;
+        }
+        .spn-card--service {
+            aspect-ratio: auto;
+            min-height: 300px;
+            align-items: flex-end;
+        }
+        .spn-card--service .spn-card__label { color: rgba(255,255,255,0.6); }
+        .spn-card--sm {
+            aspect-ratio: 1;
+            max-width: 80px;
+            padding: 12px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #f5f5f5;
+            border: 1px solid #eee;
+        }
+        .spn-card--sm-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ED1C24;
+            opacity: 0.15;
+        }
+
+        /* Fix ALL title overflow */
+        .section-title-four .title,
+        .section-title .title,
+        .service-area-four .title {
+            font-size: clamp(28px, 4vw, 56px) !important;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+    </style>
+    <!--<< Google Fonts: Oswald + Nunito Sans >>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- loading-area-start -->
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-wrap-heading">
+            <div class="load-text">
+                <span>S</span>
+                <span>P</span>
+                <span>N</span>
+            </div>
+        </div>
+    </div>
+    <!-- loading-area-end -->
+
+    <!-- GT Back To Top Start -->
+    <button id="gt-back-top" class="gt-back-to-top">
+        <i class="fa-solid fa-chevrons-up"></i>
+    </button>
+
+    <!-- GT MouseCursor Start -->
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"></div>
+
+
+  <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/spn-logo.svg" alt="SPN Communications">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text d-none d-xl-block">
+                        SPN Communications — консалтинговое агентство в сфере международных и стратегических коммуникаций. Более 30 лет мы помогаем лидерам рынка выстраивать эффективные коммуникации.
+                    </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4 class="d-none d-xl-block">Контакты</h4>
+                        <ul class="d-none d-xl-block">
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Москва, Россия</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@spncomms.com"><span>info@spncomms.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Пн-Пт, 09:00 - 18:00</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+    <!-- Header Section Start -->
+    <header class="header-section">
+        <div id="header-sticky" class="header-4">
+            <div class="container-fluid">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <div class="logo">
+                            <a href="index.html" class="header-logo-2">
+                                <img src="assets/img/logo/spn-logo.svg" alt="SPN Communications">
+                            </a>
+                        </div>
+
+                        <div class="header-left">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="#about">О нас</a>
+                                            </li>
+                                            <li class="has-dropdown">
+                                                <a href="javascript:void(0)">
+                                                    Практики <i class="fa-solid fa-chevron-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="service-strategy.html">Коммуникационные стратегии</a></li>
+                                                    <li><a href="service-events.html">Событийный менеджмент</a></li>
+                                                    <li><a href="service-digital.html">Цифровые коммуникации</a></li>
+                                                    <li><a href="service-research.html">Исследования и аналитика</a></li>
+                                                    <li><a href="service-esg.html">Устойчивое развитие</a></li>
+                                                    <li><a href="service-branding.html">Брендинг</a></li>
+                                                    <li><a href="service-gr.html">Government Relations</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#cases">Кейсы</a>
+                                            </li>
+                                            <li>
+                                                <a href="#news">Новости</a>
+                                            </li>
+                                            <li>
+                                                <a href="#team">Команда</a>
+                                            </li>
+                                            <li>
+                                                <a href="#contacts">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <div class="hero-button">
+                                <a href="#contacts" class="solid-btn">Связаться</a>
+                            </div>
+
+                            <div class="header__hamburger">
+                                <div class="sidebar__toggle">
+                                    <div class="header-bar">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 18H5C4.4 18 4 17.6 4 17C4 16.4 4.4 16 5 16H13C13.6 16 14 16.4 14 17C14 17.6 13.6 18 13 18Z"
+                                                fill="#121212" />
+                                            <path
+                                                d="M19 13H5C4.4 13 4 12.6 4 12C4 11.4 4.4 11 5 11H19C19.6 11 20 11.4 20 12C20 12.6 19.6 13 19 13Z"
+                                                fill="#121212" />
+                                            <path
+                                                d="M19 8H11C10.4 8 10 7.6 10 7C10 6.4 10.4 6 11 6H19C19.6 6 20 6.4 20 7C20 7.6 19.6 8 19 8Z"
+                                                fill="#121212" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero Section Start -->
+            <section class="spn-hero" id="hero">
+                <div class="spn-hero__blobs">
+                    <div class="spn-hero__blob spn-hero__blob--1"></div>
+                    <div class="spn-hero__blob spn-hero__blob--2"></div>
+                    <div class="spn-hero__blob spn-hero__blob--3"></div>
+                </div>
+                <div class="spn-hero__grid-overlay"></div>
+                <div class="spn-hero__corner-mark spn-hero__corner-mark--tl">Est. 1994 / Moscow</div>
+                <div class="spn-hero__corner-mark spn-hero__corner-mark--br">Strategic communications</div>
+
+                <div class="container spn-hero__content">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="spn-hero__subtitle">Фабрика Коммуникаций</div>
+                            <h1 class="spn-hero__title">
+                                <span class="spn-hero__line">Стратегические</span>
+                                <span class="spn-hero__line spn-hero__line--accent">коммуникации</span>
+                                <span class="spn-hero__line spn-hero__line--outline">для лидеров</span>
+                                <span class="spn-hero__line">рынка</span>
+                            </h1>
+                            <a href="#contacts" class="spn-hero__cta">
+                                <span>Связаться</span>
+                                <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-4">
+                            <p class="spn-hero__desc">
+                                Консалтинговое агентство в&nbsp;сфере международных и&nbsp;стратегических коммуникаций. TOP-5 национального рейтинга.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spn-hero__stats">
+                    <div class="container">
+                        <div class="spn-hero__stats-grid">
+                            <div class="spn-hero__stat">
+                                <span class="spn-hero__stat-num">30+</span>
+                                <span class="spn-hero__stat-label">лет в коммуникациях</span>
+                            </div>
+                            <div class="spn-hero__stat">
+                                <span class="spn-hero__stat-num">200+</span>
+                                <span class="spn-hero__stat-label">реализованных проектов</span>
+                            </div>
+                            <div class="spn-hero__stat">
+                                <span class="spn-hero__stat-num">5 000+</span>
+                                <span class="spn-hero__stat-label">наград и шорт-листов</span>
+                            </div>
+                            <div class="spn-hero__stat">
+                                <span class="spn-hero__stat-num">TOP-5</span>
+                                <span class="spn-hero__stat-label">национального рейтинга</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spn-hero__scroll">
+                    <div class="spn-hero__scroll-line"></div>
+                </div>
+            </section>
+            <!-- Hero Section End -->
+
+            <!-- About Section Start -->
+            <div id="about" class="about-area pt-150 pb-150 fix">
+                <div class="about-wrapper style-4">
+                    <div class="container">
+                        <div class="row gy-5">
+                            <div class="col-xl-6">
+                                <div class="about-left-content">
+                                    <div class="thumb fix">
+                                        <div class="spn-card spn-card--about"><span class="spn-card__title">SPN</span><span class="spn-card__label">С 1994 года</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="about-right-content">
+                                    <div class="section-title-four">
+                                        <div class="sub-title title-anim">
+                                            <div class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                    viewBox="0 0 34 9" fill="none">
+                                                    <rect width="34" height="2" fill="#121212" />
+                                                    <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                                </svg>
+                                            </div>
+
+                                            О нашем агентстве
+                                        </div>
+
+                                        <div class="title title-anim">
+                                            Фабрика коммуникаций
+                                            <span>с 30-летним опытом</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="about-text-content">
+                                        <p class="content-text">Стратегический партнер для лидеров рынка</p>
+                                        <span>
+                                            SPN Communications — одно из ведущих консалтинговых агентств России в сфере международных и стратегических коммуникаций. Мы помогаем крупнейшим компаниям, государственным структурам и международным организациям выстраивать эффективные коммуникации, управлять репутацией и достигать бизнес-целей через профессиональный PR, событийный менеджмент и цифровые решения.
+                                        </span>
+                                    </div>
+
+                                    <div class="about-card">
+                                        <div class="about-card-items">
+                                            <span>01</span>
+                                            <div class="card-title">Стратегия и аналитика</div>
+                                        </div>
+
+                                        <div class="about-card-items">
+                                            <span>02</span>
+                                            <div class="card-title">Креатив и реализация</div>
+                                        </div>
+
+                                        <div class="about-card-items">
+                                            <span>03</span>
+                                            <div class="card-title">Результат и KPI</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-content">
+                                        <div class="simple-btn-black gt_fade_anim" data-delay=".5" data-fade-from="top"
+                                            data-ease="bounce">
+                                            <a href="#contacts"
+                                            class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-inline-flex align-items-center justify-content-center flex-column ">
+                                            <span class="gt-btn-circle-text-2">Подробнее</span>
+                                            <i class="gt-btn-circle-dot"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Section End -->
+
+            <!-- Featured / Cases Section Start -->
+            <div id="cases" class="featured-area-four portfolio__area pt-150 pb-150 fix">
+                <div class="featured-wrapper">
+                    <div class="container">
+                        <div class="section-title-four mb-75">
+                            <div class="section-title-inner">
+                                <div class="sub-title title-anim">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9" viewBox="0 0 34 9"
+                                            fill="none">
+                                            <rect width="34" height="2" fill="#121212" />
+                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                        </svg>
+                                    </div>
+
+                                    Наши кейсы
+                                </div>
+
+                                <div class="arrow-shape wow move-shape-2" data-wow-delay="0.9s">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="469" height="16" viewBox="0 0 469 16"
+                                        fill="none">
+                                        <path
+                                            d="M468.707 8.70707C469.098 8.31654 469.098 7.68338 468.707 7.29285L462.343 0.928892C461.953 0.538367 461.319 0.538367 460.929 0.928892C460.538 1.31942 460.538 1.95258 460.929 2.34311L466.586 7.99996L460.929 13.6568C460.538 14.0473 460.538 14.6805 460.929 15.071C461.319 15.4616 461.953 15.4616 462.343 15.071L468.707 8.70707ZM0 8L8.74228e-08 9L468 8.99996L468 7.99996L468 6.99996L-8.74228e-08 7L0 8Z"
+                                            fill="#121212" />
+                                    </svg>
+                                </div>
+
+                                <div class="title title-anim portfolio__text">Проекты</div>
+                            </div>
+
+                            <p class="text title-anim">
+                                За 30 лет работы мы реализовали более 200 проектов для крупнейших российских и международных компаний, государственных структур и общественных организаций.
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="featured-card">
+                                    <div class="hover-item" data-cursor="Подробнее">
+                                        <a href="#" class="thumb no-cursor">
+                                            <div class="spn-card spn-card--1"><span class="spn-card__label">Конференция</span><span class="spn-card__num">01</span></div>
+                                            <div class="cursor-content"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <div class="card-title"><a href="#">Baltic Weekend</a></div>
+                                        <p class="text">25-летняя конференция | 350+ гостей | 700+ упоминаний в СМИ | Охват 30M в соцсетях</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="featured-card">
+                                    <div class="hover-item" data-cursor="Подробнее">
+                                        <a href="#" class="thumb no-cursor">
+                                            <div class="spn-card spn-card--2"><span class="spn-card__label">Инновации</span><span class="spn-card__num">02</span></div>
+                                            <div class="cursor-content"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <div class="card-title"><a href="#">Игры Будущего</a></div>
+                                        <p class="text">Инновационный международный проект | Стратегические коммуникации</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="featured-card">
+                                    <div class="hover-item" data-cursor="Подробнее">
+                                        <a href="#" class="thumb no-cursor">
+                                            <div class="spn-card spn-card--3"><span class="spn-card__label">Дипломатия</span><span class="spn-card__num">03</span></div>
+                                            <div class="cursor-content"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <div class="card-title"><a href="#">Саммит Россия-Африка</a></div>
+                                        <p class="text">5 мероприятий | 40 журналистов из 21 страны | 5 270+ упоминаний в СМИ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="featured-card">
+                                    <div class="hover-item" data-cursor="Подробнее">
+                                        <a href="#" class="thumb no-cursor">
+                                            <div class="spn-card spn-card--4"><span class="spn-card__label">Международный форум</span><span class="spn-card__num">04</span></div>
+                                            <div class="cursor-content"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <div class="card-title"><a href="#">Форум Россия-АСЕАН</a></div>
+                                        <p class="text">500+ делегатов | 30+ СМИ | 100M+ совокупный охват</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="featured-card">
+                                    <div class="hover-item" data-cursor="Подробнее">
+                                        <a href="#" class="thumb no-cursor">
+                                            <div class="spn-card spn-card--5"><span class="spn-card__label">Медиакампания</span><span class="spn-card__num">05</span></div>
+                                            <div class="cursor-content"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <div class="card-title"><a href="#">Кампания «Балтика Хоп»</a></div>
+                                        <p class="text">Многоэтапная медиакампания | 90% нативного контента | Удвоение KPI</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="featured-card">
+                                    <div class="hover-item" data-cursor="Подробнее">
+                                        <a href="#" class="thumb no-cursor">
+                                            <div class="spn-card spn-card--6"><span class="spn-card__label">Бизнес</span><span class="spn-card__num">06</span></div>
+                                            <div class="cursor-content"></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <div class="card-title"><a href="#">Бизнес-сессии Турция/Вьетнам/Таиланд</a></div>
+                                        <p class="text">Международное вовлечение | 100-400 публикаций в СМИ на каждую сессию</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured / Cases Section End -->
+
+            <!-- Service Section Start -->
+            <div class="service-area-four pt-150 pb-150 fix">
+                <div class="service-wrapper">
+                    <div class="container fix">
+                        <div class="gt-funfact-panel-wrap-2">
+
+                            <!-- Service 1: Коммуникационные стратегии -->
+                            <div class="gt-funfact-panel-2">
+                                <div class="row gy-4">
+                                    <div class="col-xl-5 col-lg-5">
+                                        <div class="service-left-content">
+                                            <div class="section-title-four">
+                                                <div class="sub-title title-anim">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                            viewBox="0 0 34 9" fill="none">
+                                                            <rect width="34" height="2" fill="#121212" />
+                                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                                        </svg>
+                                                    </div>
+
+                                                    Наши практики
+                                                </div>
+
+                                                <div class="title title-anim">
+                                                    Коммуникационные
+                                                    <span>стратегии</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="service-right-bottom">
+                                                <div class="thumb">
+                                                    <div class="spn-card--sm"><div class="spn-card--sm-dot"></div></div>
+                                                    <span>01</span>
+                                                </div>
+
+                                                <div class="simple-btn-white gt_fade_anim" data-delay=".5"
+                                                    data-fade-from="top" data-ease="bounce">
+                                                    <a href="service-strategy.html"
+                                                        class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-inline-flex align-items-center justify-content-center flex-column bg-2">
+                                                        <span class="gt-btn-circle-text-2">Подробнее</span>
+                                                        <i class="gt-btn-circle-dot bg-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="main-thumb">
+                                            <div class="spn-card spn-card--service spn-card--red"><span class="spn-card__label">Стратегии</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="service-right-content">
+                                            <p class="text">Разработка комплексных коммуникационных стратегий для достижения бизнес-целей и укрепления репутации.</p>
+                                            <ul>
+                                                <li>360-кампании и PR</li>
+                                                <li>Лидерские коммуникации</li>
+                                                <li>Антикризисное управление</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 2: Событийный менеджмент -->
+                            <div class="gt-funfact-panel-2 row-contol">
+                                <div class="row gy-4">
+                                    <div class="col-xl-5 col-lg-5">
+                                        <div class="service-left-content">
+                                            <div class="section-title-four">
+                                                <div class="sub-title title-anim">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                            viewBox="0 0 34 9" fill="none">
+                                                            <rect width="34" height="2" fill="#121212" />
+                                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                                        </svg>
+                                                    </div>
+
+                                                    Наши практики
+                                                </div>
+
+                                                <div class="title title-anim">
+                                                   Событийный
+                                                    <span>менеджмент</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="service-right-bottom">
+                                                <div class="thumb">
+                                                    <div class="spn-card--sm"><div class="spn-card--sm-dot"></div></div>
+                                                    <span>02</span>
+                                                </div>
+
+                                                <div class="simple-btn-white gt_fade_anim" data-delay=".5"
+                                                    data-fade-from="top" data-ease="bounce">
+                                                   <a href="service-events.html"
+                                                        class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-inline-flex align-items-center justify-content-center flex-column bg-2">
+                                                        <span class="gt-btn-circle-text-2">Подробнее</span>
+                                                        <i class="gt-btn-circle-dot bg-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="main-thumb">
+                                            <div class="spn-card spn-card--service spn-card--2"><span class="spn-card__label">События</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="service-right-content">
+                                            <p class="text">Организация мероприятий любого масштаба — от камерных пресс-завтраков до международных форумов.</p>
+                                            <ul>
+                                                <li>Офлайн/онлайн мероприятия</li>
+                                                <li>MICE-проекты по всему миру</li>
+                                                <li>Пресс-завтраки и чемпионаты</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 3: Цифровые коммуникации -->
+                            <div class="gt-funfact-panel-2 row-contol">
+                                <div class="row gy-4">
+                                    <div class="col-xl-5 col-lg-5">
+                                        <div class="service-left-content">
+                                            <div class="section-title-four">
+                                                <div class="sub-title title-anim">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                            viewBox="0 0 34 9" fill="none">
+                                                            <rect width="34" height="2" fill="#121212" />
+                                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                                        </svg>
+                                                    </div>
+
+                                                    Наши практики
+                                                </div>
+
+                                                <div class="title title-anim">
+                                                    Цифровые
+                                                    <span>коммуникации</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="service-right-bottom">
+                                                <div class="thumb">
+                                                    <div class="spn-card--sm"><div class="spn-card--sm-dot"></div></div>
+                                                    <span>03</span>
+                                                </div>
+
+                                                <div class="simple-btn-white gt_fade_anim" data-delay=".5"
+                                                    data-fade-from="top" data-ease="bounce">
+                                                    <a href="service-digital.html"
+                                                        class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-inline-flex align-items-center justify-content-center flex-column bg-2">
+                                                        <span class="gt-btn-circle-text-2">Подробнее</span>
+                                                        <i class="gt-btn-circle-dot bg-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="main-thumb">
+                                            <div class="spn-card spn-card--service spn-card--3"><span class="spn-card__label">Digital</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="service-right-content">
+                                            <p class="text">Комплексное управление цифровым присутствием бренда — от социальных сетей до управления репутацией.</p>
+                                            <ul>
+                                                <li>Социальные сети и SMM</li>
+                                                <li>Управление репутацией</li>
+                                                <li>Инфлюенсер-маркетинг</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 4: Брендинг -->
+                            <div class="gt-funfact-panel-2 row-contol">
+                                <div class="row gy-4">
+                                    <div class="col-xl-5 col-lg-5">
+                                        <div class="service-left-content">
+                                            <div class="section-title-four">
+                                                <div class="sub-title title-anim">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                            viewBox="0 0 34 9" fill="none">
+                                                            <rect width="34" height="2" fill="#121212" />
+                                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                                        </svg>
+                                                    </div>
+
+                                                    Наши практики
+                                                </div>
+
+                                                <div class="title title-anim">
+                                                    Брендинг и
+                                                    <span>креатив</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="service-right-bottom">
+                                                <div class="thumb">
+                                                    <div class="spn-card--sm"><div class="spn-card--sm-dot"></div></div>
+                                                    <span>04</span>
+                                                </div>
+
+                                                <div class="simple-btn-white gt_fade_anim" data-delay=".5"
+                                                    data-fade-from="top" data-ease="bounce">
+                                                    <a href="service-branding.html"
+                                                        class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-inline-flex align-items-center justify-content-center flex-column bg-2">
+                                                        <span class="gt-btn-circle-text-2">Подробнее</span>
+                                                        <i class="gt-btn-circle-dot bg-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="main-thumb">
+                                           <div class="spn-card spn-card--service spn-card--5"><span class="spn-card__label">Брендинг</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="service-right-content">
+                                            <p class="text">Создание и развитие сильных брендов — от разработки концепции до полного визуального воплощения.</p>
+                                            <ul>
+                                                <li>Создание бренда и ребрендинг</li>
+                                                <li>Креативная стратегия</li>
+                                                <li>Фирменный стиль и дизайн</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service Section End -->
+
+            <!-- Why We Are Section Start -->
+            <div class="who-we-are-area-four fix">
+                <div class="who-we-are-wrapper pb-150 pt-150">
+                    <div class="bg-shape-1 float-bob-y">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="132" height="135" viewBox="0 0 132 135"
+                            fill="none">
+                            <path
+                                d="M41.0122 41.0122L82.0244 82.0244L41.0122 123.037C18.3618 100.386 18.3618 63.6626 41.0122 41.0122Z"
+                                fill="white" fill-opacity="0.2" />
+                            <path
+                                d="M41.0122 41.0122C63.6626 18.3618 100.386 18.3618 123.037 41.0122L82.0244 82.0244L41.0122 41.0122Z"
+                                fill="white" fill-opacity="0.2" />
+                            <circle cx="102" cy="105" r="30" fill="white" fill-opacity="0.2" />
+                        </svg>
+                    </div>
+
+                    <div class="bg-shape-2 float-bob-y">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="74" viewBox="0 0 75 74" fill="none">
+                            <path
+                                d="M22.7845 22.9515L45.5691 45.7361L22.7845 68.5206C10.201 55.9371 10.201 35.5351 22.7845 22.9515Z"
+                                fill="white" fill-opacity="0.2" />
+                            <path
+                                d="M22.7845 22.9515C35.3681 10.368 55.7701 10.368 68.3536 22.9515L45.5691 45.7361L22.7845 22.9515Z"
+                                fill="white" fill-opacity="0.2" />
+                            <ellipse cx="58.5" cy="56.833" rx="16.5" ry="17" fill="white" fill-opacity="0.2" />
+                        </svg>
+                    </div>
+
+                    <div class="container">
+                        <div class="section-title-four">
+                            <div class="sub-title title-anim">Кто мы</div>
+
+                            <div class="title gt_text_invert_4">
+                                Мы создаём коммуникационные решения, которые <span class="bold-text">формируют</span> <span>репутацию и открывают новые возможности для вашего бизнеса.</span>
+                            </div>
+                        </div>
+
+                        <div class="who-we-are-main-content">
+                            <div class="row gy-3">
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="marquee-card-content fix">
+                                        <div class="wrapper-rolling-text">
+                                            <div class="rolling-text text">
+                                                <span class="marquee-text">Стратегия </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-8 col-lg-8">
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--1" style="aspect-ratio:1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-7 col-lg-7">
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--3" style="aspect-ratio:1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-5 col-lg-5">
+                                    <div class="marquee-card-content fix">
+                                        <div class="wrapper-rolling-text">
+                                            <div class="rolling-text text">
+                                                <span class="marquee-text">Коммуникации</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-5 col-lg-5">
+                                    <div class="marquee-card-content fix">
+                                        <div class="wrapper-rolling-text">
+                                            <div class="rolling-text text">
+                                                <span class="marquee-text">Репутация</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-7 col-lg-7">
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--5" style="aspect-ratio:1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Why We Are Section End -->
+
+            <!-- Award Section Start -->
+            <div class="award-area-four award-area fix">
+                <div class="award-wrapper pb-150 pt-150">
+                    <div class="container">
+                        <div class="row gy-5">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="thumb-wrap">
+                                    <div class="thumb text-center ">
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                aria-labelledby="v-pills-home-tab"><div class="spn-card spn-card--red" style="aspect-ratio:2/1;padding:16px"><span class="spn-card__label">РАСО</span></div></div>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                aria-labelledby="v-pills-profile-tab"><div class="spn-card spn-card--red" style="aspect-ratio:2/1;padding:16px"><span class="spn-card__label">АКОС</span></div></div>
+                                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                                aria-labelledby="v-pills-messages-tab"><div class="spn-card spn-card--red" style="aspect-ratio:2/1;padding:16px"><span class="spn-card__label">АКАР</span></div></div>
+                                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                                aria-labelledby="v-pills-settings-tab"><div class="spn-card spn-card--red" style="aspect-ratio:2/1;padding:16px"><span class="spn-card__label">РАМУ</span></div></div>
+                                        </div>
+
+                                        <div class="thumb-shape-1">
+                                            <span></span>
+                                        </div>
+                                        <div class="thumb-shape-2">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="section-title-four">
+                                    <div class="sub-title title-anim">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                viewBox="0 0 34 9" fill="none">
+                                                <rect width="34" height="2" fill="#121212" />
+                                                <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                            </svg>
+                                        </div>
+
+                                        Профессиональные членства
+                                    </div>
+
+                                    <div class="title title-anim">
+                                        Признание экспертного сообщества
+                                        <span>и отраслевые награды</span>
+                                    </div>
+                                </div>
+
+                                <div class="award-info-wrap award-wrapper-box mt-75">
+                                    <div class="nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <button class="nav-link award-box active" id="v-pills-home-tab"
+                                            data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
+                                            role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                            <span class="award-info">
+                                                <span class="info-items">
+                                                    <span class="year">РАСО</span>
+
+                                                    <span class="info-content fast-items">Российская ассоциация <span>по связям с общественностью</span></span>
+                                                </span>
+                                            </span>
+                                        </button>
+
+                                        <button class="nav-link award-box" id="v-pills-profile-tab"
+                                            data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button"
+                                            role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                            <span class="award-info">
+                                                <span class="info-items">
+                                                    <span class="year">АКОС</span>
+
+                                                    <span class="info-content">Ассоциация <span>коммуникационных агентств</span></span>
+                                                </span>
+                                            </span>
+                                        </button>
+
+                                        <button class="nav-link award-box" id="v-pills-messages-tab"
+                                            data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button"
+                                            role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                                            <span class="award-info">
+                                                <span class="info-items">
+                                                    <span class="year">АКАР</span>
+
+                                                    <span class="info-content">Ассоциация <span>коммуникационных агентств России</span></span>
+                                                </span>
+                                            </span>
+                                        </button>
+
+                                        <button class="nav-link award-box" id="v-pills-settings-tab"
+                                            data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button"
+                                            role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                                            <span class="award-info">
+                                                <span class="info-items">
+                                                    <span class="year">РАМУ</span>
+
+                                                    <span class="info-content">Российская ассоциация <span>маркетинговых услуг</span></span>
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Award Section End -->
+
+            <!-- Gallery Section Start -->
+            <div class="gallery-area-one">
+                <div class="gallery-wrapper img-container fix" style="background:#121212;padding:80px 0;overflow:hidden;position:relative;">
+                    <svg viewBox="0 0 1400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block"><circle cx="150" cy="80" r="60" fill="none" stroke="#ED1C24" stroke-width="2" opacity=".3"/><circle cx="1250" cy="220" r="80" fill="none" stroke="#ED1C24" stroke-width="2" opacity=".25"/><circle cx="300" cy="250" r="30" fill="#ED1C24" opacity=".12"/><circle cx="1100" cy="50" r="45" fill="#ED1C24" opacity=".1"/><line x1="0" y1="150" x2="200" y2="150" stroke="#ED1C24" stroke-width="1.5" opacity=".4"/><line x1="1200" y1="100" x2="1400" y2="100" stroke="#ED1C24" stroke-width="1.5" opacity=".4"/><line x1="50" y1="0" x2="200" y2="300" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/><line x1="1350" y1="0" x2="1200" y2="300" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/><circle cx="500" cy="50" r="4" fill="#ED1C24" opacity=".5"/><circle cx="900" cy="260" r="4" fill="#ED1C24" opacity=".5"/><text x="700" y="175" text-anchor="middle" font-family="'Oswald',sans-serif" font-weight="700" font-size="120" fill="white" letter-spacing="20">SPN</text><text x="700" y="220" text-anchor="middle" font-family="'Oswald',sans-serif" font-weight="400" font-size="18" fill="rgba(255,255,255,.6)" letter-spacing="10">ФАБРИКА КОММУНИКАЦИЙ</text></svg>
+                </div>
+            </div>
+            <!-- Gallery Section End -->
+
+            <!-- Our clients Section Start -->
+            <div class="our-client-area-four fix">
+                <div class="our-client-wrapper pb-150 pt-150">
+                    <div class="container">
+                        <div class="row gy-5">
+                            <div class="col-xl-6">
+                                <div class="section-title-four mb-50">
+                                    <div class="sub-title title-anim">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                viewBox="0 0 34 9" fill="none">
+                                                <rect width="34" height="2" fill="#121212" />
+                                                <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                            </svg>
+                                        </div>
+                                        Наши клиенты
+                                    </div>
+
+                                    <div class="title title-anim">
+                                        Доверие лидеров
+                                        <span>российского и мирового бизнеса</span>
+                                    </div>
+                                </div>
+
+                                <div class="our-client-right-content">
+                                    <p class="content-text title-anim">
+                                        Среди наших клиентов — Газпром, Пивоваренная компания «Балтика», Группа «Интеррос», Фонд «Росконгресс», АНО «Национальные приоритеты», компании Fortune 500 и другие лидеры рынка.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="cards">
+                                    <div class="card-items gt_fade_anim" data-delay=".4" data-fade-from="bottom">
+                                        <div style="font-size: 24px; font-weight: 600; color: #6D6D6D; letter-spacing: 2px;">ГАЗПРОМ</div>
+                                    </div>
+
+                                    <div class="card-items gt_fade_anim" data-delay=".6" data-fade-from="bottom">
+                                        <div style="font-size: 24px; font-weight: 600; color: #6D6D6D; letter-spacing: 2px;">БАЛТИКА</div>
+                                    </div>
+
+                                    <div class="card-items gt_fade_anim" data-delay=".4" data-fade-from="bottom">
+                                        <div style="font-size: 24px; font-weight: 600; color: #6D6D6D; letter-spacing: 2px;">ИНТЕРРОС</div>
+                                    </div>
+
+                                    <div class="card-items gt_fade_anim" data-delay=".6" data-fade-from="bottom">
+                                        <div style="font-size: 24px; font-weight: 600; color: #6D6D6D; letter-spacing: 2px;">РОСКОНГРЕСС</div>
+                                    </div>
+
+                                    <div class="card-items gt_fade_anim" data-delay=".4" data-fade-from="bottom">
+                                        <div style="font-size: 20px; font-weight: 600; color: #6D6D6D; letter-spacing: 2px;">НАЦИОНАЛЬНЫЕ ПРИОРИТЕТЫ</div>
+                                    </div>
+
+                                    <div class="card-items gt_fade_anim" data-delay=".6" data-fade-from="bottom">
+                                        <div style="font-size: 24px; font-weight: 600; color: #6D6D6D; letter-spacing: 2px;">FORTUNE 500</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Our clients Section End -->
+
+            <!-- Work Process / CTA Section Start -->
+            <div class="work-process-area-four fix">
+                <div class="circle-shape">
+                    <div style="width:200px;height:200px;border-radius:50%;border:2px solid #ED1C24;opacity:0.1;margin:auto"></div>
+                </div>
+                <div class="work-process-wrapper mb-150">
+
+                    <div class="shape-1 float-bob-y">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="97" height="110" viewBox="0 0 97 110"
+                            fill="none">
+                            <path
+                                d="M32.5269 32.5268L63.6307 1.42308C80.2717 18.8059 80.2717 46.2476 63.6307 63.6305L32.5269 32.5268Z"
+                                stroke="#121212" stroke-width="2" />
+                            <path
+                                d="M32.5269 32.527L63.6306 63.6307C46.2478 80.2717 18.8061 80.2717 1.42319 63.6307L32.5269 32.527Z"
+                                stroke="#121212" stroke-width="2" />
+                            <circle cx="58" cy="90" r="19" stroke="#121212" stroke-width="2" />
+                        </svg>
+                    </div>
+
+                    <div class="shape-2 float-bob-y">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="97" height="110" viewBox="0 0 97 110"
+                            fill="none">
+                            <path
+                                d="M32.5269 32.5268L63.6307 1.42308C80.2717 18.8059 80.2717 46.2476 63.6307 63.6305L32.5269 32.5268Z"
+                                stroke="#121212" stroke-width="2" />
+                            <path
+                                d="M32.5269 32.527L63.6306 63.6307C46.2478 80.2717 18.8061 80.2717 1.42319 63.6307L32.5269 32.527Z"
+                                stroke="#121212" stroke-width="2" />
+                            <circle cx="58" cy="90" r="19" stroke="#121212" stroke-width="2" />
+                        </svg>
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6">
+                                <div class="work-process-left-content">
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--red" style="aspect-ratio:1"><span class="spn-card__label">Процесс</span></div>
+                                    </div>
+
+                                    <div class="work-process-teb-content">
+                                        <ul>
+                                            <li>PR</li>
+                                            <li>Events</li>
+                                            <li>Digital</li>
+                                            <li>GR</li>
+                                            <li>Branding</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="work-process-right-content">
+                                    <div class="section-title-four mb-50">
+                                        <div class="sub-title title-anim">
+                                            <div class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9"
+                                                    viewBox="0 0 34 9" fill="none">
+                                                    <rect width="34" height="2" fill="#121212" />
+                                                    <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                                </svg>
+                                            </div>
+                                            Хотите работать с нами?
+                                        </div>
+
+                                        <div class="title title-anim">
+                                            Мы строим партнёрства,
+                                            <span>основанные на доверии и результате</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="work-process-main-content">
+                                        <div class="simple-btn-black  gt_fade_anim" data-delay=".5" data-fade-from="top"
+                                            data-ease="bounce">
+                                            <a href="#contacts"
+                                                class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-inline-flex align-items-center justify-content-center flex-column">
+                                                <span class="gt-btn-circle-text-2">Связаться</span>
+                                                <i class="gt-btn-circle-dot"></i>
+                                            </a>
+                                        </div>
+
+                                        <p class="text title-anim">
+                                            Расскажите о вашей задаче — мы предложим индивидуальное решение с чётким планом, сроками и измеримыми результатами.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Process / CTA Section End -->
+
+            <!-- Team Section Start -->
+            <div id="team" class="team-area-four fix">
+                <div class="team-wrapper pb-150">
+                    <div class="container">
+                        <div class="team-top-content pb-75">
+                            <div class="section-title-four">
+                                <div class="sub-title title-anim">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9" viewBox="0 0 34 9"
+                                            fill="none">
+                                            <rect width="34" height="2" fill="#121212" />
+                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                        </svg>
+                                    </div>
+
+                                    Наша команда
+                                </div>
+
+                                <div class="title title-anim">
+                                    Эксперты с многолетним
+                                    <span>опытом в коммуникациях</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gy-5 item-border">
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="team-main-content gt_fade_anim" data-delay=".2" data-fade-from="bottom">
+                                    <div class="member-title">Генеральный директор</div>
+                                    <div class="member-name">Андрей<br>Баранников</div>
+
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--team"><div class="spn-card--team-inner"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="team-main-content gt_fade_anim" data-delay=".4" data-fade-from="bottom">
+                                    <div class="member-title">Директор по стратегии</div>
+                                    <div class="member-name">Мария<br>Иванова</div>
+
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--team"><div class="spn-card--team-inner"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="team-main-content gt_fade_anim" data-delay=".6" data-fade-from="bottom">
+                                    <div class="member-title">Директор по развитию</div>
+                                    <div class="member-name">Сергей<br>Петров</div>
+
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--team"><div class="spn-card--team-inner"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6">
+                                <div class="team-main-content gt_fade_anim" data-delay=".9" data-fade-from="bottom">
+                                    <div class="member-title">Креативный директор</div>
+                                    <div class="member-name">Елена<br>Смирнова</div>
+
+                                    <div class="thumb">
+                                        <div class="spn-card spn-card--team"><div class="spn-card--team-inner"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Section End -->
+
+            <!-- Practices Listing Section Start -->
+            <div class="spn-practices fix">
+                <div class="container">
+                    <div class="spn-practices__header">
+                        <h2 class="spn-practices__title">Полный спектр<br><span>коммуникационных</span> услуг</h2>
+                    </div>
+                    <ul class="spn-practices__list">
+                        <li class="spn-practices__item">
+                            <a href="service-strategy.html" class="spn-practices__link">Коммуникационные стратегии</a>
+                        </li>
+                        <li class="spn-practices__item">
+                            <a href="service-events.html" class="spn-practices__link">Событийный менеджмент</a>
+                        </li>
+                        <li class="spn-practices__item">
+                            <a href="service-digital.html" class="spn-practices__link">Цифровые коммуникации</a>
+                        </li>
+                        <li class="spn-practices__item">
+                            <a href="service-research.html" class="spn-practices__link">Исследования и аналитика</a>
+                        </li>
+                        <li class="spn-practices__item">
+                            <a href="service-esg.html" class="spn-practices__link">Устойчивое развитие (ESG)</a>
+                        </li>
+                        <li class="spn-practices__item">
+                            <a href="service-branding.html" class="spn-practices__link">Брендинг</a>
+                        </li>
+                        <li class="spn-practices__item">
+                            <a href="service-gr.html" class="spn-practices__link">Government Relations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Practices Listing Section End -->
+
+            <!-- Blog / News Section Start -->
+            <div id="news" class="blog-area-one fix">
+                <div class="blog-wrapper pt-150 pb-150">
+                    <div class="container">
+                        <div class="blog-top-content">
+                            <div class="section-title-four">
+                                <div class="sub-title title-anim">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="9" viewBox="0 0 34 9"
+                                            fill="none">
+                                            <rect width="34" height="2" fill="#121212" />
+                                            <rect x="14" y="7" width="20" height="2" fill="#121212" />
+                                        </svg>
+                                    </div>
+
+                                    Новости
+                                </div>
+
+                                <div class="title title-anim">
+                                    Последние новости
+                                    <span>и публикации SPN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gy-5 item-border">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="blog-card gt_fade_anim" data-delay=".2" data-fade-from="bottom">
+                                    <a href="blog-details.html" class="title">SPN Communications организует коммуникационное сопровождение международного форума</a>
+                                    <div class="card-content">
+                                        <div class="blog-composed">
+                                            <div class="blog-text-content">
+                                                <div class="name">SPN Communications</div>
+                                                <p>Автор</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog-meta">
+                                            <span>Мероприятия</span>
+                                            <span class="meta-2">15 мар, 2026</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-thumb">
+                                        <div class="spn-card spn-card--news"><span class="spn-card__label">Новости</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="blog-card gt_fade_anim" data-delay=".4" data-fade-from="bottom">
+                                    <a href="blog-details.html" class="title">Новая ESG-стратегия: как устойчивое развитие становится драйвером роста бизнеса</a>
+                                    <div class="card-content">
+                                        <div class="blog-composed">
+                                            <div class="blog-text-content">
+                                                <div class="name">SPN Communications</div>
+                                                <p>Автор</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog-meta">
+                                            <span>ESG</span>
+                                            <span class="meta-2">10 мар, 2026</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-thumb">
+                                        <div class="spn-card spn-card--news"><span class="spn-card__label">Новости</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gy-5">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="blog-card gt_fade_anim" data-delay=".6" data-fade-from="bottom">
+                                    <a href="blog-details.html" class="title">Тренды коммуникаций 2026: что ждёт индустрию в ближайшие годы</a>
+                                    <div class="card-content">
+                                        <div class="blog-composed">
+                                            <div class="blog-text-content">
+                                                <div class="name">SPN Communications</div>
+                                                <p>Автор</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog-meta">
+                                            <span>Аналитика</span>
+                                            <span class="meta-2">28 фев, 2026</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-thumb">
+                                        <div class="spn-card spn-card--news"><span class="spn-card__label">Новости</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="blog-card gt_fade_anim" data-delay=".9" data-fade-from="bottom">
+                                    <a href="blog-details.html" class="title">Baltic Weekend отмечает юбилей: 25 лет главной коммуникационной конференции</a>
+                                    <div class="card-content">
+                                        <div class="blog-composed">
+                                            <div class="blog-text-content">
+                                                <div class="name">SPN Communications</div>
+                                                <p>Автор</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="blog-meta">
+                                            <span>События</span>
+                                            <span class="meta-2">15 фев, 2026</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-thumb">
+                                        <div class="spn-card spn-card--news"><span class="spn-card__label">Новости</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog / News Section End -->
+
+            <!-- Contact Section Start -->
+            <div id="contacts" class="contact-area-four fix">
+                <div class="contact-wrapper pt-150 pb-28">
+                    <div class="container">
+                        <div class="row gy-6 align-items-center">
+                            <div class="col-xl-5 col-lg-4 col-md-6">
+                                <a href="index.html" class="logo d-inline-block">
+                                    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" style="width:200px;height:auto"><text x="0" y="45" font-family="'Oswald',sans-serif" font-weight="700" font-size="40" fill="#121212" letter-spacing="5">SPN</text><line x1="0" y1="55" x2="120" y2="55" stroke="#ED1C24" stroke-width="2"/></svg>
+                                </a>
+                                <p class="text">SPN Communications — Фабрика Коммуникаций. Консалтинговое агентство в сфере международных и стратегических коммуникаций. TOP-5 национального рейтинга.</p>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="social-icon-wrap">
+                                    <div class="social-btn">
+                                        <a href="#">Telegram</a>
+                                    </div>
+                                    <div class="social-btn">
+                                        <a href="#">VK</a>
+                                    </div>
+                                    <div class="social-btn">
+                                        <a href="#">LinkedIn</a>
+                                    </div>
+                                    <div class="social-btn">
+                                        <a href="#">Facebook</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="contact-cta">
+                                    <div class="cta-item">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M9 0C5.40545 0 2.48108 2.92437 2.48108 6.51888C2.48108 10.9798 8.31487 17.5287 8.56325 17.8053C8.79655 18.0651 9.20387 18.0647 9.43674 17.8053C9.68512 17.5287 15.5189 10.9798 15.5189 6.51888C15.5188 2.92437 12.5945 0 9 0ZM9 9.79871C7.19149 9.79871 5.7202 8.32739 5.7202 6.51888C5.7202 4.71037 7.19152 3.23909 9 3.23909C10.8085 3.23909 12.2798 4.71041 12.2798 6.51892C12.2798 8.32743 10.8085 9.79871 9 9.79871Z"
+                                                    fill="#121212" />
+                                            </svg>
+                                        </div>
+
+                                        <p class="location">Москва, Россия</p>
+                                    </div>
+
+                                    <div class="cta-item">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <g clip-path="url(#clip0_145_2396)">
+                                                    <path
+                                                        d="M13.6848 11.9077C13.0968 11.3272 12.3626 11.3272 11.7783 11.9077C11.3326 12.3497 10.8869 12.7917 10.4486 13.2412C10.3288 13.3648 10.2276 13.391 10.0815 13.3086C9.79313 13.1513 9.48599 13.0239 9.20881 12.8516C7.91657 12.0388 6.83408 10.9938 5.8752 9.81767C5.3995 9.23336 4.97625 8.60784 4.68034 7.90366C4.62041 7.76132 4.63165 7.66768 4.74777 7.55157C5.19349 7.12082 5.62799 6.67884 6.06623 6.23685C6.67676 5.62257 6.67676 4.90341 6.06248 4.28538C5.71414 3.93329 5.36579 3.58869 5.01745 3.2366C4.65787 2.87702 4.30204 2.51369 3.93871 2.15786C3.35065 1.58478 2.6165 1.58478 2.03218 2.16161C1.58271 2.60359 1.15196 3.05681 0.694993 3.4913C0.271737 3.89209 0.0582363 4.38276 0.0132888 4.95585C-0.0578782 5.88851 0.170605 6.76873 0.492729 7.62648C1.15196 9.40191 2.15579 10.9788 3.37312 12.4246C5.01745 14.3799 6.98016 15.9268 9.27623 17.043C10.31 17.5449 11.3813 17.9307 12.5462 17.9944C13.3477 18.0393 14.0444 17.8371 14.6025 17.2115C14.9846 16.7845 15.4153 16.395 15.8198 15.9867C16.4191 15.3799 16.4229 14.6458 15.8273 14.0465C15.1157 13.3311 14.4003 12.6194 13.6848 11.9077Z"
+                                                        fill="#121212" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_145_2396">
+                                                        <rect width="18" height="18" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+
+                                        <div class="contact-number">
+                                            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="cta-item">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M10.5043 11.0278C10.0565 11.3264 9.53631 11.4842 9 11.4842C8.46373 11.4842 7.94355 11.3264 7.49573 11.0278L0.119848 6.1104C0.0789258 6.08312 0.0390586 6.05468 0 6.02543V14.0831C0 15.007 0.749707 15.7402 1.65702 15.7402H16.3429C17.2668 15.7402 18 14.9904 18 14.0831V6.02539C17.9608 6.05471 17.9209 6.08322 17.8799 6.11054L10.5043 11.0278Z"
+                                                    fill="#121212" />
+                                                <path
+                                                    d="M0.704883 5.2337L8.08077 10.1511C8.35998 10.3373 8.67997 10.4304 8.99996 10.4304C9.31999 10.4304 9.64002 10.3373 9.91923 10.1511L17.2951 5.2337C17.7365 4.93962 18 4.44743 18 3.91622C18 3.00283 17.2569 2.25977 16.3435 2.25977H1.65646C0.743098 2.2598 0 3.00286 0 3.9171C0 4.44743 0.263531 4.93962 0.704883 5.2337Z"
+                                                    fill="#121212" />
+                                            </svg>
+                                        </div>
+
+                                        <div class="contact-Email">
+                                            <a href="mailto:info@spncomms.com">info@spncomms.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Section End -->
+
+            <footer class="footer-area-four pt-80">
+                <div class="footer-wrapper">
+                    <div class="footer-shape-1">
+                        <!-- removed -->
+                    </div>
+                    <div class="footer-shape-2">
+                        <!-- removed -->
+                    </div>
+                    <div class="container">
+                        <div class="footer-main-part">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-6">
+                                    <div class="footer-menu gt_fade_anim" data-delay=".2" data-fade-from="bottom">
+                                        <p class="menu-title">Компания</p>
+
+                                        <ul>
+                                            <li><a href="#about">О нас</a></li>
+                                            <li><a href="#cases">Кейсы</a></li>
+                                            <li><a href="#team">Команда</a></li>
+                                            <li><a href="#news">Новости</a></li>
+                                            <li><a href="#contacts">Контакты</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-3 col-md-6">
+                                    <div class="footer-menu gt_fade_anim" data-delay=".4" data-fade-from="bottom">
+                                        <p class="menu-title">Практики</p>
+
+                                        <ul>
+                                            <li><a href="service-strategy.html">Коммуникационные стратегии</a></li>
+                                            <li><a href="service-events.html">Событийный менеджмент</a></li>
+                                            <li><a href="service-digital.html">Цифровые коммуникации</a></li>
+                                            <li><a href="service-research.html">Исследования и аналитика</a></li>
+                                            <li><a href="service-esg.html">Устойчивое развитие</a></li>
+                                            <li><a href="service-branding.html">Брендинг</a></li>
+                                            <li><a href="service-gr.html">Government Relations</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-3 col-md-6">
+                                    <div class="footer-menu gt_fade_anim" data-delay=".6" data-fade-from="bottom">
+                                        <p class="menu-title">Членства</p>
+
+                                        <ul>
+                                            <li><a href="#">РАСО</a></li>
+                                            <li><a href="#">АКОС</a></li>
+                                            <li><a href="#">Ассоциация менеджеров</a></li>
+                                            <li><a href="#">АКАР</a></li>
+                                            <li><a href="#">РАМУ</a></li>
+                                            <li><a href="#">НАОМ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-3 col-md-6">
+                                    <div class="footer-menu gt_fade_anim" data-delay=".9" data-fade-from="bottom">
+                                        <p class="menu-title">Рассылка</p>
+                                        <p class="text">Подпишитесь на новости и аналитику от SPN.</p>
+
+                                        <div class="footer-top-right-content">
+                                            <div class="form-group">
+                                                <input type="email" name="email" id="email"
+                                                    placeholder="Ваш email" class="form-control">
+
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                        viewBox="0 0 25 25" fill="none">
+                                                        <g clip-path="url(#clip0_145_2450)">
+                                                            <path
+                                                                d="M9.02783 18.1719V22.9571C9.02783 23.2914 9.24243 23.5875 9.56021 23.6927C9.63966 23.7185 9.72117 23.7309 9.80164 23.7309C10.0431 23.7309 10.2762 23.6174 10.4248 23.4152L13.2239 19.606L9.02783 18.1719Z"
+                                                                fill="#e63946" />
+                                                            <path
+                                                                d="M24.437 0.143504C24.1996 -0.0246705 23.8881 -0.0473689 23.6301 0.0877898L0.41584 12.2108C0.141395 12.3542 -0.020589 12.6472 0.00210938 12.9557C0.0258395 13.2653 0.231157 13.5294 0.523141 13.6295L6.97671 15.8353L20.7206 4.08374L10.0854 16.897L20.9012 20.5937C20.9816 20.6206 21.0662 20.635 21.1508 20.635C21.2912 20.635 21.4304 20.5968 21.5532 20.5226C21.7493 20.4029 21.8823 20.2017 21.9164 19.9757L24.7537 0.888425C24.796 0.599536 24.6743 0.312711 24.437 0.143504Z"
+                                                                fill="#e63946" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_145_2450">
+                                                                <rect width="24.7619" height="24.7619" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-border mb-70"></div>
+
+                    <div class="container">
+                        <div class="footer-center">
+                            <div class="row gy-5 align-items-center">
+                                <div class="col-xl-8 col-lg-8">
+                                    <h3 class="bottom-title">Сотрудничество
+                                        <svg class="wow move-shape-4" xmlns="http://www.w3.org/2000/svg" width="317"
+                                            height="16" viewBox="0 0 317 16" fill="none">
+                                            <path
+                                                d="M316.707 8.70711C317.098 8.31658 317.098 7.68342 316.707 7.29289L310.343 0.928932C309.953 0.538408 309.319 0.538408 308.929 0.928932C308.538 1.31946 308.538 1.95262 308.929 2.34315L314.586 8L308.929 13.6569C308.538 14.0474 308.538 14.6805 308.929 15.0711C309.319 15.4616 309.953 15.4616 310.343 15.0711L316.707 8.70711ZM0 8V9H316V8V7H0V8Z"
+                                                fill="white" fill-opacity="0.2" />
+                                        </svg>
+                                        <span class="sec-title-1">
+                                            с нами
+                                        </span>
+                                    </h3>
+                                </div>
+
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="move-btn text-end gt_fade_anim" data-delay=".5" data-fade-from="top"
+                                        data-ease="bounce">
+                                        <div class="gt-hover-btn-wrapper">
+                                            <a href="#contacts"
+                                                class="gt-hover-btn gt-hover-btn-item gt-btn-circle-2 d-flex align-items-center justify-content-center flex-column bg-2">
+                                                <span class="gt-btn-circle-text-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46"
+                                                        viewBox="0 0 46 46" fill="none">
+                                                        <path
+                                                            d="M30.6742 18.0435L14.1775 34.5402L11.4673 31.8301L27.9621 15.3333H13.4242V11.5H34.5075V32.5833H30.6742V18.0435Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                </span>
+                                                <i class="gt-btn-circle-dot bg-2"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-border mt-70"></div>
+
+                    <div class="container">
+                        <div class="footer-bottom">
+                            <span>&copy; <a href="#">SPN Communications</a>. Все права защищены</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< nice-selec Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Parallaxie Js >>-->
+    <script src="assets/js/parallaxie.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/gasp/plugin.js"></script>
+    <script src="assets/js/gasp/scroll-magic.js"></script>
+    <script src="assets/js/gasp/parallax-slider.js"></script>
+    <script src="assets/js/gasp/nice-select.js"></script>
+    <script src="assets/js/gasp/purecounter.js"></script>
+    <script src="assets/js/gasp/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/gasp/Observer.min.js"></script>
+    <script src="assets/js/gasp/splitting.min.js"></script>
+    <script src="assets/js/gasp/webgl.js"></script>
+    <script src="assets/js/gasp/parallax-scroll.js"></script>
+    <script src="assets/js/gasp/atropos.js"></script>
+
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
